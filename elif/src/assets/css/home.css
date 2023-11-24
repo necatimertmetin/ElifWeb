@@ -1,140 +1,374 @@
 /* src/components/Home.css */
 
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .hero {
-    background-color: #333;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-  }
-  
-  button {
-    background-color: #61dafb;
-    color: white;
-    font-size: 1em;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  .slick-track{
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #2f80ed;
-  }
-  
-  .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-    
-    background-color: #f5f5f5;
-  }
-  
- /* src/assets/css/home.css */
- .home-slider-feature {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-    position: relative;
-    height: 400px;
-    padding: 150px 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .background-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Resmin boyutunu koru ve içeriğini kırpa */
-    z-index: -1;
-  }
-  
-  .home-slider-content {
-    z-index: 1;
-    text-align: center;
-    color: #333; /* Beyaz metin rengi */
-    background-color: #ffffff88;
-    box-shadow: 0 0 20px #ffffff88;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Center vertically */
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%);
-    padding: 10px;
-    font-weight: 700;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
 }
 
-  .slick-track{
-    background-color: #333;
-    gap: 10px;
-    
+.home-landing-wrapper {
+  border: 100px solid white;
+  position: relative;
+  color: white;
+  min-height: 100vh;
+  /* Ensure minimum height is 100% of the viewport height */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* Change to column for better responsiveness */
+  align-items: center;
+  box-sizing: border-box;
+
+}
+
+.home-landing-left {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-landing-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+  background-position: inherit;
+  background-size: inherit;
+  background-repeat: inherit;
+  filter: blur(2px); /* Burada istediğiniz blur miktarını ayarlayabilirsiniz */
+}
+
+.home-landing-left-title {
+  position: relative;
+  z-index: 1;
+  font-size: 150px;
+  font-weight: 500;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #333;
+  filter: none; /* Blur olmamasını sağlamak için */
+}
+
+
+
+.home-landing-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  border-radius: 0px 100px 100px 0px;
+
+  /* Adjust min-width for responsiveness */
+}
+
+.home-landing-right-title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-top: 50px;
+}
+
+.home-landing-right-title {
+  font-size: 50px;
+  font-weight: 500;
+
+}
+
+.home-landing-right-subtitle {
+  font-size: 55px;
+  font-weight: 100;
+  text-shadow: -1px 0px 13px rgba(226, 194, 179, 1);
+}
+
+.home-landing-right-p {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 200;
+  padding: 0 100px;
+}
+
+.home-landing-right-button-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.home-landing-right-button-container-title {
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.home-landing-right-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.home-landing-right-button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #fff;
+  /* Beyaz kenarlık */
+  color: #fff;
+  /* Beyaz metin rengi */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  /* Görsel geçiş efekti */
+
+
+}
+
+.home-info-container {
+  padding: 50px;
+}
+
+.home-cards-container{
+  display: flex;
+  flex-direction: row;
+  padding: 20px 300px;
+  justify-content: center;
+  gap: 50px;
+  height: 500px;
+}
+.home-card {
+  perspective: 1000px;
+  width: 200px; /* Kartın genişliği ve yüksekliği ihtiyacınıza göre ayarlayın */
+  height: 300px;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 20px;
+}
+
+.card.flipped {
+  transform: rotateX(180deg);
+}
+
+.card-side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  backface-visibility: hidden; /* Eklenecek */
+}
+.card-half{
+  flex: 1;
+  
+}
+.front {
+  transform: rotateX(0deg);
+  z-index: 2; /* Eklenecek */
+}
+
+.back {
+  transform: rotateX(180deg);
+  z-index: 1; /* Eklenecek */
+}
+
+
+
+
+
+
+.slick-track {
+  cursor: pointer;
+}
+
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+
+}
+
+/* src/assets/css/home.css */
+.home-slider-feature {
+
+  position: relative;
+  height: 10vw;
+  padding: 150px 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Resmin boyutunu koru ve içeriğini kırpa */
+}
+
+.home-slider-content {
+  text-align: center;
+  color: #333;
+  /* Beyaz metin rengi */
+  background-color: #F8F8F8;
+  /* Gri */
+  box-shadow: 0 0 20px #F8F8F8;
+  /* Gri */
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Center vertically */
+  position: absolute;
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, 150%);
+  padding: 10px;
+  font-weight: 700;
+}
+
+.slick-track {
+  gap: 10px;
+
+}
+
+.home-slider-content>div {
+  margin-bottom: 10px;
+}
+
+.home-slider-content>div:first-child {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.home-slider-content>div:last-child {
+  font-size: 16px;
+}
+
+
+
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.testimonial {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial p {
+  font-size: 1.2em;
+}
+
+/* Add more styles as needed */
+
+@media (min-width: 600px) {
+  .home-landing-wrapper {
+    flex-direction: row;
+    /* Change back to row for wider screens */
+    align-items: stretch;
   }
-  .home-slider-content > div {
-    margin-bottom: 10px;
+
+  .home-landing-left {
+    height: auto;
+    /* Adjust height to auto for responsiveness */
   }
-  
-  .home-slider-content > div:first-child {
-    font-size: 24px;
-    font-weight: 900;
+
+  .home-landing-right {
+    min-width: 50%;
+    /* Set a minimum width for the right side on wider screens */
   }
-  
-  .home-slider-content > div:last-child {
-    font-size: 16px;
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 1200px) {
+  .home-landing-wrapper {
+    flex-direction: column;
+    /* Change back to row for wider screens */
+    align-items: stretch;
+    border: none;
   }
-  
-  
-  
-  
-  h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+
+  .home-landing-right-title {
+    font-size: 40px;
+    /* Adjust font size for smaller screens */
   }
-  
-  .testimonial {
-    background-color: #333;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
+
+  .home-landing-right-subtitle {
+    font-size: 45px;
+    /* Adjust font size for smaller screens */
   }
-  
-  .testimonial-content {
-    max-width: 800px;
-    margin: 0 auto;
+
+  .home-landing-right-p {
+    padding: 0 20px;
+    /* Adjust padding for smaller screens */
   }
-  
-  .testimonial p {
-    font-size: 1.2em;
+
+  .home-landing-right {
+    padding: 0 20px;
+    /* Adjust padding for smaller screens */
   }
-  
-  /* Add more styles as needed */
-  
+
+  .home-landing-right-button {
+    width: 150px;
+    /* Adjust button width for smaller screens */
+    height: 40px;
+    /* Adjust button height for smaller screens */
+    font-size: 14px;
+    /* Adjust font size for smaller screens */
+  }
+}
+
+.home-info-container {
+  padding: 20px;
+  /* Adjust padding for smaller screens */
+}

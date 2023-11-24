@@ -1,0 +1,42 @@
+[
+  {
+    "palette1": {
+      "main": "#403234",
+      "button": "#9a7e83",
+      "content1": "#e2c2b3",
+      "content2": "#f7f3f5",
+      "background": "#687477",
+      "accent": "#0066CC"
+    }
+  },
+  {
+    "palette2": {
+      "main": "#5a2b50",
+      "button": "#3e6978",
+      "content1": "#a36267",
+      "content2": "#f0ebeb",
+      "background": "#486b7a",
+      "accent": "#990099"
+    }
+  },
+  {
+    "palette3": {
+      "main": "#264653",
+      "button": "#2a9d8f",
+      "content1": "#e9c46a",
+      "content2": "#f4a261",
+      "background": "#e76f51",
+      "accent": "#6d6875"
+    }
+  },
+  {
+    "palette4": {
+      "main": "#1d3557",
+      "button": "#457b9d",
+      "content1": "#a8dadc",
+      "content2": "#f1faee",
+      "background": "#f4f1de",
+      "accent": "#e63946"
+    }
+  }
+]

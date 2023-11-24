@@ -10,10 +10,18 @@ function App() {
     <Router>
       <div className="App">
         <main>
-          <Navbar />
+          <Navbar paletteName={"palette1"} />
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/home" exact component={Home} />
+            <Route
+              path="/"
+              exact
+              render={() => <Home paletteName="palette1" />}
+            />
+            <Route
+              path="/home"
+              exact
+              render={() => <Home paletteName="palette1" />}
+            />
             {/* Add other routes for different pages if needed */}
             <Route component={NotFound} />
           </Switch>
