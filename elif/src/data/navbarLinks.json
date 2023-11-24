@@ -1,0 +1,11 @@
+[
+    { "to": "/home", "label": "Home" },
+    { "to": "/tops", "label": "Tops" },
+    { "to": "/bottoms", "label": "Bottoms" },
+    { "to": "/lingerie", "label": "Lingerie" },
+    { "to": "/blog", "label": "Blog" },
+    { "to": "/about", "label": "About" },
+    { "to": "/contact", "label": "Contact" },
+    { "to": "/portfolio", "label": "Portfolio" }
+  ]
+  

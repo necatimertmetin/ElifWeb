@@ -1,0 +1,43 @@
+/* src/assets/css/navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    height: 100px;
+    color: white;
+  }
+  .nav-link-wrapper{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+  }
+  .nav-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: color 0.2s ease-in-out;
+    height: 100%;
+    padding: 10px;
+  }
+  
+  .nav-link:hover {
+    color: #61dafb;
+    filter: drop-shadow(0 0 10px rgba(97, 218, 251, 0.8)); /* Adjust the values as needed */
+
+  }
+  
+  .link1 { color: #ff7e5f; }
+  .link2 { color: #4caf50; }
+  .link3 { color: #2196f3; }
+  .link4 { color: #ff9800; }
+  .link5 { color: #9c27b0; }
+  .link6 { color: #795548; }
+  .link7 { color: #ffeb3b; }
+  .link8 { color: #00bcd4; }
+  .link9 { color: #607d8b; }
+  .link10 { color: #e91e63; }
+  
