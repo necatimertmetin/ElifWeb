@@ -40,7 +40,7 @@ function Home() {
           {featuresData.map((feature, index) => (
             <div key={index} className={`home-slider-feature`}>
               <img src={feature.backgroundImage} alt="" className="background-img" />
-              <div className="content">
+              <div className="home-slider-content">
                 <div>{feature.title}</div>
                 <div>{feature.description}</div>
               </div>

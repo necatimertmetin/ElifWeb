@@ -53,10 +53,10 @@ body {
   
  /* src/assets/css/home.css */
  .home-slider-feature {
+
     position: relative;
     width: 100%;
     padding: 150px 0;
-    margin: auto;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -75,22 +75,39 @@ body {
     z-index: -1;
   }
   
-  .content {
+  .home-slider-content {
     z-index: 1;
     text-align: center;
     color: #333; /* Beyaz metin rengi */
+    background-color: #ffffff88;
+    box-shadow: 0 0 20px #ffffff88;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    font-weight: 700;
+}
+
+  .slick-track{
+    background-color: #333;
+    gap: 10px;
+    
   }
-  
-  .content > div {
+  .home-slider-content > div {
     margin-bottom: 10px;
   }
   
-  .content > div:first-child {
+  .home-slider-content > div:first-child {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 900;
   }
   
-  .content > div:last-child {
+  .home-slider-content > div:last-child {
     font-size: 16px;
   }
   
