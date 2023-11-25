@@ -28,7 +28,7 @@ function Navbar({ paletteName }) {
     top: 0,
     justifyContent: 'space-around',
     alignItems: 'center',
-    height: 100,
+    padding: '10px',
     color: 'white',
     backgroundColor: scrollPosition > 0 ? '#333' : palette.content1,
     transition: 'background-color 0.3s ease', // Animasyon ekleyebilirsiniz

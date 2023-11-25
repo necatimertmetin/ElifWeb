@@ -18,9 +18,9 @@ const Home = ({ paletteName }) => {
 
 
   const cards = [
-    { id: 1, frontText: 'Front Side 1', backText: 'Back Side 1', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" },
-    { id: 2, frontText: 'Front Side 2', backText: 'Back Side 2', frontBackgroundColor: palette.content1, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"  },
-    { id: 3, frontText: 'Front Side 3', backText: 'Back Side 3', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"  },
+    { id: 1, frontText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum.', backText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum.', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" },
+    { id: 2, frontText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum.', backText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum.', frontBackgroundColor: palette.content1, backBackgroundColor: palette.main, frontTopImg: "https://cdn2.vectorstock.com/i/1000x1000/65/56/team-lead-engineer-with-developers-coding-together-vector-34266556.jpg"  },
+    { id: 3, frontText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum.', backText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur purus a lorem pellentesque dictum.', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"  },
   ];
 
 
@@ -110,18 +110,18 @@ const Home = ({ paletteName }) => {
           {cards.map((card) => (
             <div key={card.id} className={`home-card card ${flippedCards.includes(card.id) ? 'flipped' : ''}`} onClick={() => handleCardFlip(card.id)}>
               <div className="card-side front" style={{ backgroundColor: card.frontBackgroundColor }}>
-                <div className='card-front-top card-half'>
-                  <img src={card.frontTopImg} alt="Front Image" />
+                <div className='card-front-top card-half card-top'>
+                  <img className='card-front-top-img' src={card.frontTopImg} alt="Front Image" />
                 </div>
-                <div className='card-front-bottom card-half'>
+                <div className='card-front-bottom card-half card-bottom'  style={{ backgroundColor: palette.main, color: palette.content2 }} >
                   {card.frontText}
                 </div>
               </div>
-              <div className="card-side back" style={{ backgroundColor: card.backBackgroundColor }}>
-                <div className='card-back-top card-half'>
+              <div className="card-side back" style={{ backgroundColor: card.backBackgroundColor, color: palette.content2 }}>
+                <div className='card-back-top card-half card-top'>
                   {card.backText}
                 </div>
-                <div className='card-back-bottom card-half'>
+                <div className='card-back-bottom card-half card-bottom'>
                   {card.backText}
                 </div>
               </div>
@@ -147,7 +147,8 @@ const Home = ({ paletteName }) => {
           ))}
         </Slider>
       </div>
-      <section className="testimonial">
+
+      <section className="testimonial" style={{ backgroundColor: palette.main, color: palette.content1 }}>
         <div className="testimonial-content">
           <h2>What People are Saying</h2>
           <p>"A great quote from a satisfied user."</p>
