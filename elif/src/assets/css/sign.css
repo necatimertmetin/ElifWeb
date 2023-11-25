@@ -1,0 +1,126 @@
+.sign-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.sign-wrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.sign-wrapper-side{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.sign-image {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    transition: transform 1s ease-in-out;
+    z-index: 100;
+    background-position: center;
+  }
+  .move-left {
+    transform: translateX(0%);
+  }
+  
+  .move-right {
+    transform: translateX(100%);
+  }
+  .sign-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 50%;
+    border: 2px solid;
+    border-radius: 30px;
+    padding: 50px 0px;
+    gap: 20px;
+  }
+  .sign-content{
+    flex: 1;
+  }
+  .sign-content-title{
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .sign-content-subtitle{
+    font-size: 30px;
+    font-weight: 200;
+  }
+  .sign-input-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 20px;
+  }
+  .sign-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    gap: 20px;
+}
+
+.sign-input {
+    padding: 10px;
+    font-size: 16px; /* Adjusted font size for input */
+    border-radius: 100px;
+    outline: none;
+    border: 1px solid #ccc; /* Added border for better visibility */
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.sign-button {
+    font-size: 18px; /* Adjusted font size for button */
+    padding: 0 30px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    width: 100%;
+    outline: none;
+    background-color: transparent; /* Set a transparent background */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add transition for a smooth effect */
+}
+
+.sign-button-primary {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.sign-button-secondary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Hover effect for both buttons */
+.sign-button:hover {
+    background-color: #ddd; /* Light gray color on hover for both buttons */
+    color: #000;
+    border-color: #ddd;
+}
+
+.sign-button-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+.sign-button-secondary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}

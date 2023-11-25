@@ -4,25 +4,35 @@ import './App.css';
 import Home from './components/pages/home';
 import Navbar from './components/navbar/navbar';
 import NotFound from './components/pages/notFound';
+import SignIn from './components/pages/signIn';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <main>
-          <Navbar paletteName={"palette1"} />
+          {/* Navbar sadece belirli sayfalarda gösterilecek */}
           <Switch>
             <Route
-              path="/"
+              path={["/home", "/aboutUs"]}
               exact
-              render={() => <Home paletteName="palette1" />}
+              render={(routeProps) => {
+                // Eğer Home sayfasındaysak Navbar'ı gösterme
+                if (routeProps.location.pathname === "/home") {
+                  return null;
+                }
+                return <Navbar paletteName={"palette1"} />;
+              }}
             />
-            <Route
-              path="/home"
-              exact
-              render={() => <Home paletteName="palette1" />}
-            />
-            {/* Add other routes for different pages if needed */}
+          </Switch>
+
+          {/* Sayfa içeriği */}
+          <Switch>
+            <Route path="/" exact render={() => <Home paletteName="palette1" />} />
+            <Route path="/home" exact render={() => <Home paletteName="palette1" />} />
+            <Route path="/sign-in" exact render={() => <SignIn paletteName="palette1" />} />
+            <Route path="/aboutUs" exact render={() => <Home paletteName="palette1" />} />
+            {/* Diğer sayfaların route'larını buraya ekleyin */}
             <Route component={NotFound} />
           </Switch>
         </main>

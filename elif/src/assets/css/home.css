@@ -10,7 +10,6 @@ body {
 
 .home-landing-wrapper {
   border: 100px solid white;
-  border-top: 0px;
   position: relative;
   color: white;
   min-height: 100vh;
@@ -142,10 +141,13 @@ body {
   /* Beyaz kenarlık */
   color: #fff;
   /* Beyaz metin rengi */
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.3s ease-in-out, transform .1s ease-in-out;
   /* Görsel geçiş efekti */
 
 
+}
+.home-landing-right-button:active {
+  transform: scale(95%);
 }
 
 .home-info-container {
