@@ -18,7 +18,7 @@ const Home = ({ paletteName }) => {
 
 
   const cards = [
-    { id: 1, frontText: 'Front Side 1', backText: 'Back Side 1', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" },
+    { id: 1, frontText: 'Lorem Ipsum', backText: 'Back Side 1', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg" },
     { id: 2, frontText: 'Front Side 2', backText: 'Back Side 2', frontBackgroundColor: palette.content1, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"  },
     { id: 3, frontText: 'Front Side 3', backText: 'Back Side 3', frontBackgroundColor: palette.content2, backBackgroundColor: palette.main, frontTopImg: "https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"  },
   ];
