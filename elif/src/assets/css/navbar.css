@@ -1,16 +1,6 @@
 /* src/assets/css/navbar.css */
 
-.navbar {
-  display: flex;
-  position: sticky;
-  top: 0; /* Navbar'ın ekranın üst kısmına yapışmasını sağlar */
-  justify-content: space-around;
-  align-items: center;
-  background-color: #333;
-  height: 100px;
-  color: white;
-  z-index: 10;
-}
+
   .nav-link-wrapper{
     flex: 1;
     display: flex;
@@ -24,7 +14,6 @@
     font-weight: bold;
     font-size: 22px;
     transition: color 0.2s ease-in-out;
-    height: 100%;
     padding: 10px;
   }
   
