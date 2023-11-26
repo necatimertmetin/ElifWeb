@@ -1,10 +1,9 @@
 [
     { "to": "/home", "label": "Home" },
-    { "to": "/sign-in", "label": "sign in" },
     { "to": "/bottoms", "label": "Bottoms" },
     { "to": "/lingerie", "label": "Lingerie" },
     { "to": "/blog", "label": "Blog" },
-    { "to": "/about", "label": "About" },
+    { "to": "/aboutUs", "label": "About" },
     { "to": "/contact", "label": "Contact" },
     { "to": "/portfolio", "label": "Portfolio" }
     

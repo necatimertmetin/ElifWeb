@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-align-start {
+    align-items: flex-start;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.about-us-title {
+    font-size: 72px;
+    font-weight: 200;
+}
+
+.about-us-title-padding {
+    padding: 100px;
+}
+.about-us-button{
+    margin: 25px;
+    padding: 10px 40px;
+    border: 1px solid;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: transparent;
+}
+.image-flip {
+    transform: scaleX(-1);
+}
+
+/* Add transition for smooth animation */
+/* ... (existing styles) */
+
+/* Initially, hide the title and description off-screen */
+.flex .about-us-title,
+.flex .title-description {
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out;
+}
+
+/* On the element with the show-content class, move the title and description back to their original position */
+.flex.show-content .about-us-title,
+.flex.show-content .title-description {
+    transform: translateX(0);
+}

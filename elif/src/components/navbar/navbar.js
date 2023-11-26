@@ -30,7 +30,7 @@ function Navbar({ paletteName }) {
     alignItems: 'center',
     padding: '10px',
     color: 'white',
-    backgroundColor: scrollPosition > 0 ? '#333' : palette.content1,
+    backgroundColor: scrollPosition > 0 ? palette.main : 'transparent',
     transition: 'background-color 0.3s ease', // Animasyon ekleyebilirsiniz
     zIndex: 1000,
   };
