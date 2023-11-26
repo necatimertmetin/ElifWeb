@@ -11,12 +11,12 @@
   },
   {
     "palette2": {
-      "main": "#5a2b50",
-      "button": "#3e6978",
-      "content1": "#a36267",
-      "content2": "#f0ebeb",
-      "background": "#486b7a",
-      "accent": "#990099"
+      "main": "#FF4F5A",
+      "button": "#FF4F5A",
+      "content1": "#ff7cb9",
+      "content2": "#ffffff",
+      "background": "#ffffff",
+      "accent": "#6c757d"
     }
   },
   {

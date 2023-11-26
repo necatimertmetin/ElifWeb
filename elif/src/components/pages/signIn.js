@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../../assets/css/sign.css';
+import { useHistory } from 'react-router-dom'; // Import useHistory
 import imageLinks from '../../data/imageLinks.json';
 import { getPalette } from '../utils/getPalette';
 
 const SignIn = ({ paletteName }) => {
 
+    const history = useHistory();
     const palette = getPalette(paletteName);
 
     const handleLoginClick = () => {
@@ -79,7 +81,7 @@ const SignIn = ({ paletteName }) => {
                             <input className='sign-input' style={{ borderColor: palette.main }} type='password' placeholder='Password' />
                         </div>
                         <div className='sign-content sign-button-container'>
-                            <button className='sign-button sign-button-primary' style={{ borderColor: palette.main, backgroundColor: palette.main, color: palette.content1 }}>
+                            <button className='sign-button sign-button-primary'  style={{ borderColor: palette.main, backgroundColor: palette.main, color: palette.content1 }}>
                                 Sign Up
                             </button>
                             <button className='sign-button sign-button-secondary' onClick={handleLoginClick} style={{ borderColor: palette.main, backgroundColor: 'transparent', color: palette.main }}>
@@ -109,7 +111,7 @@ const SignIn = ({ paletteName }) => {
                             <input className='sign-input' style={{ borderColor: palette.main }} type='password' placeholder='Password' />
                         </div>
                         <div className='sign-content sign-button-container'>
-                            <button className='sign-button sign-button-primary' style={{ borderColor: palette.main, backgroundColor: palette.main, color: palette.content1 }}>
+                            <button className='sign-button sign-button-primary' onClick={() => history.push('/aboutUs')} style={{ borderColor: palette.main, backgroundColor: palette.main, color: palette.content1 }}>
                                 Sign In
                             </button>
                             <button className='sign-button sign-button-secondary' onClick={handleSignUpClick} style={{ borderColor: palette.main, backgroundColor: 'transparent', color: palette.main }}>
