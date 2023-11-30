@@ -6,6 +6,7 @@ import Navbar from './components/navbar/navbar';
 import NotFound from './components/pages/notFound';
 import SignIn from './components/pages/signIn';
 import AboutUs from './components/pages/aboutUs';
+import Radio from './components/pages/radio';
 
 function App() {
   return (
@@ -15,14 +16,21 @@ function App() {
           {/* Navbar sadece belirli sayfalarda gösterilecek */}
           <Switch>
             <Route
-              path={["/home", "/aboutUs"]}
+              path={["/home", "/aboutUs", "/radio"]}
               exact
               render={(routeProps) => {
-                // Eğer Home sayfasındaysak Navbar'ı gösterme
+                let paletteName;
+                // Determine paletteName based on the route
                 if (routeProps.location.pathname === "/home") {
-                  return null;
+                  paletteName = "palette1";
+                } else if (routeProps.location.pathname === "/aboutUs") {
+                  paletteName = "palette2";
+                } else if (routeProps.location.pathname === "/radio") {
+                  paletteName = "palette3";
+                } else {
+                  paletteName = "defaultPalette"; // Set a default palette if needed
                 }
-                return <Navbar paletteName={"palette1"} />;
+                return <Navbar paletteName={paletteName} />;
               }}
             />
           </Switch>
@@ -33,6 +41,7 @@ function App() {
             <Route path="/home" exact render={() => <Home paletteName="palette1" />} />
             <Route path="/sign-in" exact render={() => <SignIn paletteName="palette1" />} />
             <Route path="/aboutUs" exact render={() => <AboutUs paletteName="palette2" />} />
+            <Route path="/radio" exact render={() => <Radio paletteName="palette3" />} />
             {/* Diğer sayfaların route'larını buraya ekleyin */}
             <Route component={NotFound} />
           </Switch>

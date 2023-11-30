@@ -1,7 +1,7 @@
 [
     { "to": "/home", "label": "Home" },
-    { "to": "/bottoms", "label": "Bottoms" },
-    { "to": "/lingerie", "label": "Lingerie" },
+    { "to": "/bottoms", "label": "About Us" },
+    { "to": "/radio", "label": "Radio" },
     { "to": "/blog", "label": "Blog" },
     { "to": "/aboutUs", "label": "About" },
     { "to": "/contact", "label": "Contact" },
