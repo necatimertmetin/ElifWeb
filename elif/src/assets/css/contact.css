@@ -1,0 +1,9 @@
+.contact-landing-container{
+    width: 100%;
+}
+.contact-landing-container img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: top;
+}
